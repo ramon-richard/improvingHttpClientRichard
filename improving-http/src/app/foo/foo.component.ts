@@ -9,11 +9,11 @@ import {Foo} from './foo.model';
   styleUrls: ['./foo.component.css']
 })
 export class FooComponent implements OnInit {
-  fooData : Foo[];
-  data: Object;
-  loading: boolean;
-  o: Observable<Object>;
-  oFoo : Observable<Foo[]>;
+  fooData : Foo[] | undefined;
+  data: Object | undefined;
+  loading: boolean | undefined;
+  o: Observable<Object> | undefined;
+  oFoo : Observable<Foo[]> | undefined;
   constructor(public http: HttpClient) { }
 
   makeRequest(): void {
